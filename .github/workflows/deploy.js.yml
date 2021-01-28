@@ -3,7 +3,7 @@
 
 name: Node.js CI
 env:
-  VERSION_APPLICATION: '1.0.1'  
+  VERSION_APPLICATION: 0
 on:
   push:
     branches: [ main ]
@@ -25,7 +25,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install
+    - run: |
+       VERSION_APPLICATION = 'v1.0.0'
+       npm install
   
       
   deployStage:
@@ -38,6 +40,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: "Version application"
       run: 
+      
        echo "A nova versão ${VERSION_APPLICATION}"
        
   deployProduction:
