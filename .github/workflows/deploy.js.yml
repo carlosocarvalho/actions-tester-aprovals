@@ -26,7 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: |
-       VERSION_APPLICATION = 'v1.0.0'
+       echo VERSION_APPLICATION = 'v1.0.0'
        npm install
   
       
