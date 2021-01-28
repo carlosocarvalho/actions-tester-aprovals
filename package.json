@@ -1,0 +1,17 @@
+
+{
+    "name": "test-project",
+    "version": "1.0.0",
+    "description": "A Node.js project",
+    "main": "src/index.js",
+    "private": true,
+    "scripts": {
+        "dev": "nodemon ./src/index",
+        "start": "node ./src/index",
+        "test": "jest",
+        "compile": "tsc"
+    },
+    "dependencies": {
+        "express": "^4.17.1"  
+    }
+}
